@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,7 +32,7 @@ public class LoginPage {
 	WebElement Password ;
 	
 
-	@FindBy(css = "#login")
+	@FindBy(css = "button[type='submit']")
 	WebElement button ;
 
 	
@@ -44,7 +45,7 @@ public class LoginPage {
 	@FindBy (xpath ="//button[@id='createAccount']")
 	WebElement accountcreationlink;
 	
-	
+
 	
 	public WebElement SigIn()
 	{
@@ -72,6 +73,7 @@ public class LoginPage {
 		return button;
 	}
 	
+	
 	public WebElement checkbox()
 	{
 		return checkbox;
@@ -86,5 +88,9 @@ public class LoginPage {
 	{
 		return accountcreationlink;
 	}
+	
+	
+	
+	
 }
 
